@@ -1,0 +1,188 @@
+body {
+  .info-box:hover,
+  .statistics-wrapper:hover,
+  .threats-wrapper:hover,
+  .top-contributors-wrapper:hover{
+    border: 5px solid red;
+  }
+
+  i, img, .hits-image-wrapper{
+    display: none;
+  }
+
+  &.whitespace{
+    .column-wrapper {
+      margin: 50px auto 0;
+      width: 75%;
+      min-width: 600px;
+      max-width: 1024px;
+    }
+
+    .info-box:hover,
+    .statistics-wrapper:hover,
+    .threats-wrapper:hover,
+    .top-contributors-wrapper:hover{
+      border: initial;
+    }
+
+    .info-box{
+      margin: 30px 20px 50px;
+
+      .info-box-date{
+        margin: 5px 0;
+      }
+    }
+
+    .statistics-wrapper {
+      margin: 30px 20px;
+
+      .hits-wrapper {
+        margin-top: 5px;
+        margin-left: 10px;
+        div {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    .threats-wrapper{
+      margin: 30px 20px;
+
+      ul{
+        padding-left: 30px;
+        margin-top: 5px;
+
+        li {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    .top-contributors-wrapper{
+      margin: 30px 20px;
+
+      .contributors-wrapper{
+        margin-left: 10px;
+      }
+
+      .contributors-wrapper div {
+        margin: 5px 0;
+      }
+    }
+  }
+  &.proportions {
+    .left-column:hover,
+    .right-column-top:hover,
+    .threats-wrapper:hover,
+    .top-contributors-wrapper:hover{
+      border: 5px solid red;
+    }
+
+    font-size: 16px;
+
+    .column-wrapper{
+      display: flex;
+
+      .left-column{
+        flex: 1 1 66%;
+        margin: 0 30px;
+      }
+      .right-column{
+        flex: 1 1 33%;
+        margin: 0 30px;
+        display: flex;
+        flex-direction: column;
+
+        .right-column-top{
+          flex: 1 1 66%;
+        }
+        .right-column-bottom{
+          flex: 1 1 33%;
+          display: flex;
+
+          .threats-wrapper{
+            flex: 1 1 50%;
+          }
+          .top-contributors-wrapper{
+            flex: 1 1 50%;
+            margin: 30px 20px 30px 50px;
+          }
+        }
+
+      }
+    }
+
+    .info-box-title,
+    .statistics-heading,
+    .threats-heading,
+    .top-contributors-heading {
+      font-size: 26px;
+      font-weight: 700;
+    }
+  }
+  &.typography {
+
+    .left-column:hover,
+    .right-column-top:hover,
+    .statistics-wrapper:hover,
+    .threats-wrapper:hover,
+    .top-contributors-wrapper:hover{
+      border: initial;
+    }
+
+    font-family: 'Lato', sans-serif;
+
+    .info-box-title,
+    .statistics-heading,
+    .threats-heading,
+    .top-contributors-heading {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .info-box-date{
+      font-size: smaller;
+    }
+
+  }
+  &.colors {
+    color: #1B263B;
+    background-color: #f7f7f7;
+
+    .info-box-title,
+    .statistics-heading,
+    .threats-heading,
+    .top-contributors-heading {
+      color: #00789e
+    }
+
+    .info-box-date {
+      color: #c1131d;
+    }
+  }
+  &.images {
+
+    i, img, .hits-image-wrapper{
+      display: initial;
+    }
+
+    .hits-image-wrapper img{
+      max-width: 310px;
+      margin-top: 10px;
+    }
+
+    .hits-wrapper{
+      display: none;
+    }
+
+    .threats-wrapper ul {
+      list-style-type: circle;
+    }
+
+    .contributors-wrapper img {
+      max-width: 40px;
+      border-radius: 50px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}

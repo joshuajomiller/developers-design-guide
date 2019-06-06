@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI Design Guide</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!--<body class="whitespace proportions typography colors images">-->
+<body>
+<div class="column-wrapper">
+    <div class="left-column">
+        <div class="info-box">
+            <div class="info-box-title">Info Box #1</div>
+            <div class="info-box-date"><i class="icofont-calendar"></i> 12/12/2019 - 13:37</div>
+            <div class="info-box-description">
+                There is an unusual, yet necessary requirement for this kind of aggravated decline in the annuls of the
+                literary world. Contrary to previous thought, a yet unsubstantiated claim exists, one that does no
+                favours, yet belies actual surface claims. Few can claim to have knowledge, yet many are already
+                deeply acquainted with these systems of design.
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-box-title">Info Box #2</div>
+            <div class="info-box-date"><i class="icofont-calendar"></i> 11/12/2019 - 14:37</div>
+            <div class="info-box-description">
+                There is an unusual, yet necessary requirement for this kind of aggravated decline in the annuls of the
+                literary world. Contrary to previous thought, a yet unsubstantiated claim exists, one that does no
+                favours, yet belies actual surface claims. Few can claim to have knowledge, yet many are already
+                deeply acquainted with these systems of design.
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-box-title">Info Box #3</div>
+            <div class="info-box-date"><i class="icofont-calendar"></i> 10/12/2019 - 15:37</div>
+            <div class="info-box-description">
+                There is an unusual, yet necessary requirement for this kind of aggravated decline in the annuls of the
+                literary world. Contrary to previous thought, a yet unsubstantiated claim exists, one that does no
+                favours, yet belies actual surface claims. Few can claim to have knowledge, yet many are already
+                deeply acquainted with these systems of design.
+            </div>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="right-column-top">
+            <div class="statistics-wrapper">
+                <div class="statistics-heading">Monthly Hits</div>
+                <div class="hits-wrapper">
+                    <div>January 2018 - 10</div>
+                    <div>February 2018 - 20</div>
+                    <div>March 2018 - 30</div>
+                    <div>April 2018 - 40</div>
+                    <div>May 2018 - 50</div>
+                    <div>June 2018 - 40</div>
+                    <div>July 2018 - 30</div>
+                    <div>August 2018 - 20</div>
+                    <div>September 2018 - 10</div>
+                    <div>October 2018 - 100</div>
+                    <div>November 2018 - 50</div>
+                    <div>December 2018 - 50</div>
+                </div>
+                <div class="hits-image-wrapper">
+                    <img src="chart.PNG" alt="chart">
+                </div>
+            </div>
+        </div>
+        <div class="right-column-bottom">
+            <div class="threats-wrapper">
+                <div class="threats-heading">Threats</div>
+                <ul>
+                    <li>Mercury</li>
+                    <li>Venus</li>
+                    <li>Earth</li>
+                    <li>Mars</li>
+                    <li>Jupiter</li>
+                    <li>Saturn</li>
+                    <li>Uranus</li>
+                    <li>Neptune</li>
+                </ul>
+            </div>
+            <div class="top-contributors-wrapper">
+                <div class="top-contributors-heading">Contributors</div>
+                <div class="contributors-wrapper">
+                    <div><img src="https://www.pacific.edu/Images/school-business/students/Brandon%20Cardona2.png" alt="profile image">Andy Chen</div>
+                    <div><img src="https://32thcv3s4g2f4bru3o3jkumf-wpengine.netdna-ssl.com/wp-content/uploads/2019/03/mark-trousdale.jpg" alt="profile image">Benji Davies</div>
+                    <div><img src="https://pbs.twimg.com/profile_images/620962350305292288/wZnnFVHR_400x400.png" alt="profile image">Carol Ericson</div>
+                    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg7OeJpZCIywzEAeH_R5m7FQd1Zer-yOeP1il0vz6Nm8mOEh2p" alt="profile image">Sarah Jacobs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const classes = ['whitespace', 'proportions', 'typography', 'colors', 'images'];
+    document.addEventListener('keydown', (e)=>{
+        if (e.key === 'ArrowRight'){
+            const classToAdd = classes.splice(0,1)[0];
+            classToAdd && document.body.classList.add(classToAdd);
+        } else if (e.key === 'ArrowLeft'){
+            const classToRemove = document.body.classList.item(document.body.classList.length - 1);
+            if (classToRemove){
+                classes.unshift(classToRemove);
+                document.body.classList.remove(classToRemove);
+            }
+        } else if (e.key === 'Home'){
+            document.body.className = 'start'
+        } else if (e.key === 'End'){
+            document.body.className = 'start';
+            document.body.classList.add(...['whitespace', 'proportions', 'typography', 'colors', 'images']);
+        }
+    });
+</script>
+
+</body>
+</html>
